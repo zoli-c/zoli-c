@@ -20,7 +20,7 @@
             .container {
                 background-color: #97fcff;
                 padding: 50px;
-                max-width: min(50%, 600px);
+                max-width: 600px;
                 /* text-align: center; */
                 font-weight: bolder;
                 border-radius: 4px;
@@ -48,13 +48,13 @@
                 border: 3px solid #000;
                 color: #fff;
                 box-shadow: 5px 5px 0px 0px #000;
-                text-align: center;
+            }
+            a {
                 color: #00f7ff;
                 text-decoration: none;
                 font-weight: bold;
-                font-size: 1.1em;
             }
-            .email-container:hover {
+            a:hover {
                 text-shadow: 0px 0px 1px #00f7ff;
             }
             .dark-link {
@@ -83,7 +83,7 @@
                     href="https://rjionline.org/person/zoli-csernatony-and-dana-amihere/"
                     >RJI Fellow</a
                 >
-                of the 2024-25 cohort.
+                in the 2024-25 cohort.
             </p>
 
             <p>
@@ -91,7 +91,9 @@
                 Just want to hang out and chat about stuff?
             </p>
 
-            <div id="email-box" class="email-container"></div>
+            <div class="email-container">
+                <p>Email me at: <span id="email-link"></span></p>
+            </div>
         </div>
 
         <script>
@@ -100,8 +102,10 @@
                 var domain = "diginthere";
                 var tld = "com";
                 var email = user + "@" + domain + "." + tld;
-                var emailLink = document.getElementById("email-box");
+                var emailLink = document.createElement("a");
+                emailLink.href = "mailto:" + email;
                 emailLink.textContent = email;
+                document.getElementById("email-link").appendChild(emailLink);
             });
             yourname;
         </script>
