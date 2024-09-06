@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>zoli csernatony</title>
+        <style>
+            body {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #fefefe;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #222;
+            }
+            .container {
+                background-color: #97fcff;
+                padding: 50px;
+                max-width: min(50%, 600px);
+                /* text-align: center; */
+                font-weight: bolder;
+                border-radius: 4px;
+                border: 3px solid #333;
+                box-shadow: 10px 10px 0px 0px #000;
+            }
+            h1 {
+                font-size: 36px;
+                color: #000;
+                margin-bottom: 20px;
+                letter-spacing: 2px;
+                /* text-transform: uppercase; */
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.8;
+                color: #333;
+                margin: 10px 0;
+            }
+            .email-container {
+                margin-top: 40px;
+                background-color: #333;
+                padding: 15px;
+                border-radius: 4px;
+                border: 3px solid #000;
+                color: #fff;
+                box-shadow: 5px 5px 0px 0px #000;
+                text-align: center;
+                color: #00f7ff;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+            .email-container:hover {
+                text-shadow: 0px 0px 1px #00f7ff;
+            }
+            .dark-link {
+                color: #999;
+                text-decoration: none;
+                border-bottom: 3px solid #999;
+            }
+            .dark-link:hover {
+                border-bottom-color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Zoli Csernatony</h1>
+            <p>
+                Developing
+                <a class="dark-link" href="https://diginthere.com">tech</a> that
+                puts content creators and audiences in a mutually beneficial new
+                relationship.
+            </p>
+
+            <p>
+                <a
+                    class="dark-link"
+                    href="https://rjionline.org/person/zoli-csernatony-and-dana-amihere/"
+                    >RJI Fellow</a
+                >
+                of the 2024-25 cohort.
+            </p>
+
+            <p>
+                Any of this sounds interesting? Working on something similar?
+                Just want to hang out and chat about stuff?
+            </p>
+
+            <div id="email-box" class="email-container"></div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var user = "zoli";
+                var domain = "diginthere";
+                var tld = "com";
+                var email = user + "@" + domain + "." + tld;
+                var emailLink = document.getElementById("email-box");
+                emailLink.textContent = email;
+            });
+            yourname;
+        </script>
+    </body>
+</html>
