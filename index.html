@@ -9,12 +9,6 @@
             body {
                 font-family: "Courier New", Courier, monospace;
                 background-color: #fefefe;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
                 color: #222;
                 font-size: min(18px, 5vw);
             }
@@ -22,11 +16,18 @@
                 background-color: #97fcff;
                 padding: 50px;
                 max-width: min(50%, 600px);
-                max-height: 80%;
                 font-weight: bolder;
                 border-radius: 4px;
                 border: 3px solid #333;
                 box-shadow: 10px 10px 0px 0px #000;
+                height: auto;
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100%;
+                margin: auto;
+                padding: auto;
             }
             h1 {
                 font-size: min(36px, 8vw);
