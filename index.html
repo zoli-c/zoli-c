@@ -54,6 +54,8 @@
                 font-weight: bold;
                 font-size: min(20px, 4vw);
                 width: fit-content;
+                cursor: pointer;
+                user-select: none; /* Disable text selection by dragging */
             }
             .email-container:hover {
                 text-shadow: 0px 0px 1px #00f7ff;
@@ -92,7 +94,7 @@
                 Just want to hang out and chat about stuff?
             </p>
 
-            <div id="email-box" class="email-container"></div>
+            <a id="email-box" class="email-container"></a>
         </div>
 
         <script>
@@ -103,6 +105,7 @@
                 var email = user + "@" + domain + "." + tld;
                 var emailLink = document.getElementById("email-box");
                 emailLink.textContent = email;
+                emailLink.href = "mailto:" + email;
             });
             yourname;
         </script>
