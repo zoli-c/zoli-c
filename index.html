@@ -4,7 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>zoli csernatony</title>
+        <title>Zoli Csernatony — Building a Better Way for Creators and Audiences</title>
+        <meta name="description" content="Zoli Csernatony is building Digin, an unusual but better way for creators and their audiences to grow together. RJI Fellow, 2024-25 cohort." />
+        <meta name="author" content="Zoli Csernatony" />
+        <meta property="og:title" content="Zoli Csernatony" />
+        <meta property="og:description" content="Building an unusual but better way for creators and their audiences to grow together. Concrete stuff, none of the fluff." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zoli.fyi" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Zoli Csernatony" />
+        <meta name="twitter:description" content="Building an unusual but better way for creators and their audiences to grow together." />
+        <link rel="canonical" href="https://zoli.fyi" />
         <style>
             body {
                 font-family: "Courier New", Courier, monospace;
@@ -19,9 +29,15 @@
                 align-items: center;
                 box-sizing: border-box;
             }
+            .page {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: min(50%, 600px);
+            }
             .container {
                 background-color: #97fcff;
-                max-width: min(50%, 600px);
+                width: 100%;
                 font-weight: bolder;
                 border-radius: 4px;
                 border: 3px solid #333;
@@ -31,38 +47,72 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: 20px;
+                gap: 24px;
+                padding: 30px 30px 15px;
             }
             h1 {
                 font-size: min(36px, 8vw);
                 color: #000;
-                margin-bottom: 20px;
+                margin: 0;
                 letter-spacing: 2px;
             }
             p {
                 line-height: 1.8;
                 color: #333;
-                margin: 10px 0;
+                margin: 0;
             }
-            .email-container {
-                margin-top: 40px;
-                align-self: center;
+            .actions {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                width: 100%;
+            }
+            .cta-primary {
                 background-color: #333;
-                padding: 15px;
+                padding: 15px 30px;
                 border-radius: 4px;
                 border: 3px solid #000;
                 box-shadow: 5px 5px 0px 0px #000;
                 text-align: center;
                 color: #00f7ff;
                 text-decoration: none;
+                font-family: "Courier New", Courier, monospace;
                 font-weight: bold;
                 font-size: min(20px, 4vw);
-                width: fit-content;
                 cursor: pointer;
-                user-select: none; /* Disable text selection by dragging */
+                user-select: none;
+                transition: transform 0.1s, box-shadow 0.1s;
             }
-            .email-container:hover {
+            .cta-primary:hover {
                 text-shadow: 0px 0px 1px #00f7ff;
+                transform: translate(2px, 2px);
+                box-shadow: 3px 3px 0px 0px #000;
+            }
+            .email-quiet {
+                margin-top: 22px;
+                color: #999;
+                text-decoration: none;
+                font-family: "Courier New", Courier, monospace;
+                font-weight: bold;
+                font-size: min(13px, 3.5vw);
+                cursor: pointer;
+                text-align: center;
+            }
+            .email-quiet:hover {
+                color: #666;
+            }
+            .playful {
+                display: inline-block;
+                transform: rotate(-3deg) translateY(-3px);
+                font-style: italic;
+                -webkit-text-stroke: 0.5px currentColor;
+            }
+            .cta-note {
+                margin-top: 20px;
+                color: #333;
+                font-size: min(15px, 3.8vw);
+                line-height: 1.8;
             }
             .dark-link {
                 color: #999;
@@ -76,39 +126,41 @@
                 body {
                     font-size: 20px;
                 }
-                .container {
+                .page {
                     max-width: 85%;
                 }
-                .email-container {
+                .cta-primary {
                     font-size: 18px;
+                }
+                .cta-note {
+                    font-size: 14px;
+                }
+                .email-quiet {
+                    font-size: 12px;
                 }
             }
         </style>
     </head>
     <body>
+        <div class="page">
         <div class="container">
             <h1>Zoli Csernatony</h1>
             <p>
-                Designing
-                <a class="dark-link" href="https://digin.app">an unusual but better way</a> 
+                Building
+                <a class="dark-link" href="https://digin.app">an <span class="playful">unusual</span> but better way</a> 
                 for creators and their audiences to grow together. Concrete stuff, none of the fluff.
             </p>
 
             <p>
-                <a
-                    class="dark-link"
-                    href="https://rjionline.org/person/zoli-csernatony-and-dana-amihere/"
-                    >RJI Fellow</a
-                >
-                of the 2024-25 cohort.
+                Curious how this could work for your audience?
             </p>
 
-            <p>
-                Any of this sounds interesting? Working on something similar?
-                Just want to hang out and chat about stuff?
-            </p>
-
-            <a id="email-box" class="email-container">email me</a>
+            <div class="actions">
+                <a class="cta-primary" href="https://calendar.app.google/DtAuzJTwgEfUnTRg8" target="_blank">grab a time*</a>
+                <span class="cta-note">*No commitment, just a 20-minute conversation.</span>
+            </div>
+        </div>
+        <a id="email-box" class="email-quiet"></a>
         </div>
 
         <script>
